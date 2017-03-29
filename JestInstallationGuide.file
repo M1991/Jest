@@ -1,0 +1,32 @@
+
+	JEST is used for plainless javascript unit testing  (Kent C. Dodds)
+
+    Install Jest as npm dependency
+	
+	$npm install --save-dev jest-cli
+	
+	Check in package.json for jest dependencies if added or not. You will get a jest dependency as "jest-cli" : "version"
+	
+	Check in node module, bin directory that jest is available there 
+	
+	Need above dependency to be installed to test your js file. The file that is to be tested should be named with an extension '.spec.js' or '.test.js'
+	
+	const filenameWithoutExtension = require('/.filenameWithoutExtension')
+
+	test ( whatEverTOBeTested, () => {				//Global object for jest
+		expect().toBe()
+	})
+	
+	In package.json inside "scripts" {
+								"test":"RenameThisFileToJest"
+							}
+							
+	We can run the file with npm as npm run test or npm test or npm t
+	
+	Donot use console.log(window) as jest recognizes that as a object and will hamper in memory and performance
+	
+	Add a jest dependency in package.json as
+	
+	"jest" {
+		"testEnvironment" : "node"
+	}
